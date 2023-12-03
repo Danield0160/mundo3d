@@ -1,0 +1,83 @@
+body{
+    overflow: hidden;
+    perspective: 1000px;
+}
+#world{
+    transform-style: preserve-3d;
+    position: relative;
+    top: 30vh;
+    width: 2px;
+    height: 2000px;
+    /* transform-origin: 1000px 100px; */
+    
+}
+
+#baliza{
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#baliza div{
+    background-color: red;
+    height: 60vh;
+    width: 3vh;
+    position: absolute;
+    
+}
+#baliza2{
+    transform: rotateY(90deg);
+}
+
+#suelo{
+    transform-style: preserve-3d;
+    width: 5000px;
+    height: 8800px;
+    background-image: url("../img/uvmap.png");
+    background-size: contain;
+    transform: rotateX(90deg);
+    position: absolute;
+    top: -170%;
+}
+
+
+.cubo{
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    transform: translateX(70vh) translateY(40vh);
+    --size : 30vh;
+}
+.cubo>div{
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+}
+.cubo>.pieza1{
+    background-color: aqua;
+}
+.cubo>.pieza2{
+    background-color: red;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+}
+
+.cubo>.pieza3{
+    background-color: green;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+}
+.cubo>.pieza4{
+    background-color: yellow;
+    transform-origin: left;
+    transform: rotateY(90deg);
+}
+.cubo>.pieza5{
+    background-color: purple;
+    transform: translateZ(calc(var(--size) * -1)) ;
+}
+.cubo>.pieza6{
+    background-color: darkblue;
+    transform-origin: right;
+    transform: rotateY(-90deg);
+}
