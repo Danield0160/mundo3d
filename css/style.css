@@ -9,7 +9,6 @@ body{
     width: 2px;
     height: 2000px;
     /* transform-origin: 1000px 100px; */
-    
 }
 
 #baliza{
@@ -80,4 +79,48 @@ body{
     background-color: darkblue;
     transform-origin: right;
     transform: rotateY(-90deg);
+}
+
+
+
+
+
+#laptop{
+    transform-style: preserve-3d;
+    --ancho: 300px;
+    --alto: 150px;
+    position: absolute;
+    left: 1000px;
+    top: 500px;
+    transform: translateZ(250px);
+}
+
+#laptop>*{
+    position: absolute;
+}
+#teclado{
+    width: var(--ancho);
+    height: var(--alto);
+    background-color: grey;
+    transform-origin: bottom;
+    transform: rotateX(-90deg);
+}
+#pantalla{
+    width: var(--ancho);
+    height: var(--alto);
+    background-color: black;
+    transform-origin: bottom;
+    transition: all 1s linear;
+}
+
+
+
+#puntero{
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    background-color: red;
+    top: 50vh;
+    left: 50vw;
+    pointer-events: none;
 }
